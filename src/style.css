@@ -1,0 +1,149 @@
+@font-face {
+    font-family: 'MyFont';
+    src: 
+      url('./01.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+  }
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    --primaryColor: #31E1F7;
+    --secondaryColor: #400D51;
+    --footerColor: #D800A6;
+    --sideColor: #FF7777;
+    --white: rgb(215, 211, 211);
+    --black: rgb(21, 19, 19);
+
+    --br: 5px;
+    --gap: 10px;
+    --pd: 10px;
+}
+
+#content{
+    width: 100%;
+    height: 100vh;
+    background-color: aqua;
+    display: grid;
+    grid-template: 100px 1fr 100px/.5fr 2fr;
+    
+}
+
+.navBar{
+    
+    background: linear-gradient(var(--secondaryColor), var(--black));
+    grid-column: 1/-1;
+    grid-row: 1/2;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+button{
+    background-color: var(--primaryColor);
+    padding: var(--pd);
+    width: 6rem;
+    height: 3rem;
+    border-radius: var(--br);
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.sideBar{
+    background-color: var(--white);
+    grid-row: 2/3;
+    grid-column: 1/2;
+}
+.menu{
+    top: 5%;
+    left: 6%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap);
+    
+    z-index: 99;
+}
+.menuLogo{
+    width: 11vw;
+    height: 15vh;
+    border-radius: var(--br);
+    background: linear-gradient(var(--footerColor), var(--sideColor));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#foodIcon{
+    width: 50%;
+    height: 60%;
+}
+.menuList{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    background: linear-gradient(var(--sideColor), var(--footerColor));
+    width: 11vw;
+    height: auto;
+    border-radius: var(--br);
+    padding: var(--pd);
+    min-width: 11vw;
+}
+h3{
+    padding: calc(var(--pd)*.5);
+    text-decoration: underline;
+}
+.mainBar{
+    background: radial-gradient(farthest-corner at 60% 60%, var(--white), var(--primaryColor), var(--secondaryColor));
+    display: flex;
+
+}
+
+.first{
+    width: 50%;
+    height: 100%;
+
+}
+.mainContent{
+    width: 70%;
+    height: 70%;
+    padding: calc(var(--pd)*1.5);
+    gap: var(--gap);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.contentHeading{
+    padding: calc(var(--pd)*1.5);
+    font-family: 'MyFont';
+}
+.pTag{
+    text-align: justify;
+    padding: calc(var(--pd)*1.5);
+}
+.second{
+    width: 50%;
+    height: 70%;
+    object-fit: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#mainImg{
+    width: 90%;
+    border-radius: 20%;
+    height: 90%;
+}
+.foo{
+    grid-column: 1/-1;
+    background: linear-gradient(var(--secondaryColor), var(--sideColor));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--white);
+}
+p{
+    font-size: 25px;
+}
